@@ -14,7 +14,7 @@ export const Route = createRootRoute({
                     <ul className="nav__list">
                         <li className="nav__item">
                             <Link to='/'>
-                                Услуги
+                                Уведомления
                             </Link>
                         </li>
                         <li className="nav__item">
