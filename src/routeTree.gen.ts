@@ -11,13 +11,31 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as RegImport } from './routes/reg'
+import { Route as NotificationsImport } from './routes/notifications'
 import { Route as DocumentsImport } from './routes/documents'
+import { Route as AppointmentImport } from './routes/appointment'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
 
+const RegRoute = RegImport.update({
+  path: '/reg',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const NotificationsRoute = NotificationsImport.update({
+  path: '/notifications',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const DocumentsRoute = DocumentsImport.update({
   path: '/documents',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const AppointmentRoute = AppointmentImport.update({
+  path: '/appointment',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -34,8 +52,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/appointment': {
+      preLoaderRoute: typeof AppointmentImport
+      parentRoute: typeof rootRoute
+    }
     '/documents': {
       preLoaderRoute: typeof DocumentsImport
+      parentRoute: typeof rootRoute
+    }
+    '/notifications': {
+      preLoaderRoute: typeof NotificationsImport
+      parentRoute: typeof rootRoute
+    }
+    '/reg': {
+      preLoaderRoute: typeof RegImport
       parentRoute: typeof rootRoute
     }
   }
@@ -43,6 +73,12 @@ declare module '@tanstack/react-router' {
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren([IndexRoute, DocumentsRoute])
+export const routeTree = rootRoute.addChildren([
+  IndexRoute,
+  AppointmentRoute,
+  DocumentsRoute,
+  NotificationsRoute,
+  RegRoute,
+])
 
 /* prettier-ignore-end */
