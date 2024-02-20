@@ -19,7 +19,9 @@
     }
   }
 }
-
+.container{
+  flex: 1 0 auto;
+}
 .name {
   padding: 30px;
   margin-bottom: 30px;

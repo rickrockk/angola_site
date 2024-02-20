@@ -1,9 +1,13 @@
+.main_head{
+    margin-top: 2em;
+}
 .main_box{
+    
     align-items: center;
     display: grid;
     grid-template-columns: 2fr 0.5fr;
     justify-items: start;
-    padding-top: 7em;
+    padding-top: 2em;
     p span{
         color: red;
     }
@@ -11,7 +15,14 @@
         color: red;
     }
 }
+ul{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
 .head{
+    align-items: center;
     justify-content: space-between;
     padding: 20px;
     margin-bottom: 0px;
@@ -22,6 +33,7 @@ h4{
     margin-bottom: 10px;
 }
 .notif_box{
+
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -54,7 +66,8 @@ h4{
 
     
  .svg{
-    background-color: #FFCB00   ;
+    border-radius: 15px 15px 0px 0px;
+    background-color: #FFCB00 ;
     padding: 20px;
     
  }
