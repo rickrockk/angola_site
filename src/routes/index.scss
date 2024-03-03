@@ -129,55 +129,11 @@
     .ads__list {
       display: flex;
       list-style: none;
+      gap: 20px;
       justify-content: space-between;
       margin-top: 2.5em;
     }
   }
 }
 
-.main__articles {
-  margin-top: 3em;
-  padding-bottom: 3em;
-  .articles__container {
-    .articles__heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2em;
 
-      .articles__showall {
-        color: #0D4CD3;
-      }
-    }
-    .articles__body {
-      .articles__list {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-
-        .articles__item {
-          display: flex;
-          flex-direction: column;
-          max-width: 17.5rem;
-
-          .article__date {
-            color: #4D83FA;
-            margin-top: 2em;
-            margin-bottom: 0.8em;
-          }
-
-          .article__title {
-            color: #0B1F33;
-            margin-bottom: 1em;
-            line-height: 24px
-          }
-
-          .article__desc {
-            color: #66727F;
-            line-height: 24px;
-          }
-        }
-      }
-    }
-  }
-}

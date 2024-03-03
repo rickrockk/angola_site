@@ -1,4 +1,5 @@
 import { createFileRoute} from "@tanstack/react-router";
+import NotificationsList from "../components/NotificationsList/NotificationsList";
 import './notifications.scss'
 
 export const Route = createFileRoute("/notifications")({
@@ -10,60 +11,7 @@ function Notif() {
         <div className="container">
         <h1 className="main_head">Уведомления</h1>
             <div className="main_box">
-                <div className="notif_box">
-                    <div className="head">
-                        <h5>Показать: <span>Госпочта</span></h5>
-                        <ul>
-                            <li>
-                            <h5><span>Прочитать все</span>
-                           
-                           </h5>
-                            </li>
-                            <li><svg 
-                                width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="6" r="2" fill="#CC2229"/>
-                                <circle cx="12" cy="12" r="2" fill="#CC2229"/>
-                                <circle cx="12" cy="18" r="2" fill="#CC2229"/>
-                            </svg></li>
-                        </ul>
-                        
-                        
-                    </div>
-
-                    <div className="notification">
-                            <div className="date">
-                                <h4>Госпочта</h4>
-                                <p>29 декабря 2020</p>
-                            </div>
-                            <div className="details">
-                                <h4>Поступил новый штраф на ТС М777ММ777</h4>
-                                <p>МВД России</p>
-                            </div>
-                    </div>
-            
-                    <div className="notification">
-                        <div className="date">
-                        <h4>Госпочта</h4>
-                        <p>29 декабря 2020</p>
-                        </div>
-                        <div className="details">
-                        <h4>Вам направлены электронные документы</h4>
-                        <p>ФССП России</p>
-                        </div>
-                    </div>
-            
-                    <div className="notification">
-                        <div className="date">
-                        <h4>Госпочта</h4>
-                        <p>29 декабря 2020</p>
-                        </div>
-                        <div className="details">
-                        <h4>Запись на прием к врачу</h4>
-                        <p>Университетская клиническая больница № 1 Клинического центра Первого Московского государственного медицинского университета имени И.М. Сеченова</p>
-                        </div>
-                    </div>
-                </div>
-            
+                <NotificationsList/>
                     <div className="mail">
                         <div className="svg">
                             <svg 
